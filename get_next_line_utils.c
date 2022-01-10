@@ -6,7 +6,7 @@
 /*   By: jaewoo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 13:37:26 by jaewoo            #+#    #+#             */
-/*   Updated: 2021/12/30 14:34:47 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/01/11 00:18:07 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (NULL);
 	i = -1;
 	while (s1[++i])
-		str[i] = s1[i];
+		temp[i] = s1[i];
 	j = -1;
 	while (s2[++j])
-		str[i + j] = s2[j];
-	str[i + j] = '\0';
-	return (str);
+		temp[i + j] = s2[j];
+	temp[i + j] = '\0';
+	return (temp);
 }
 
 char	*ft_strdup(const char *src)
