@@ -6,11 +6,39 @@
 /*   By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 17:23:12 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/01/11 00:14:31 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/01/11 01:35:37 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.c"
+#include "get_next_line.h"
+
+char	*strdup_ch(char *buf_line, int ch)
+{
+	char	*temp;
+	size_t	len;
+
+	len = ft_strchr(buf_line, &ch) - buf_line;
+	temp = ft_substr(buf_line, 0, len);
+	return (temp);
+}
+
+char	*extract_line(char **buf_line)
+{
+	char	*temp;
+	char	*save;
+
+	temp = strdup_ch(*buf_line, '\n');
+	save = strdup_ch(ft_strchr(*buf_line) + 1, '\0');
+	free(*buf_line);
+	*buf_line = save;
+	return (temp);
+}
+
+char	*ft_free(char *buf_line)
+{
+	free(buf_line);
+	return (0);
+}
 
 char	*get_next_line(int fd)
 {
@@ -34,6 +62,9 @@ char	*get_next_line(int fd)
 			return (0);
 	}
 	if (ft_strchr(buf_line, '\n'))
-		return (extract)
+		return (extract_line(&buf_line));
+	if (buf_line && buf_line[0])
+		res_line = strdup_ch(buf_line, '\0');
+	buf_line = ft_free(buf_line);
 	return (res_line);
 }
