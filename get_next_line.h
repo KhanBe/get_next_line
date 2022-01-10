@@ -6,7 +6,7 @@
 /*   By: jaewoo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 13:37:36 by jaewoo            #+#    #+#             */
-/*   Updated: 2021/12/30 13:50:59 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/01/04 17:49:09 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1024
 # endif
 
 # ifndef MAX_FD
