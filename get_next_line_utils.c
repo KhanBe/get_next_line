@@ -6,7 +6,7 @@
 /*   By: jaewoo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 13:37:26 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/01/11 00:18:07 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/01/12 15:42:14 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strchr(const char *str, int ch)
 	char	temp;
 	char	*stemp;
 
+	if (!str)
+		return (0);
 	i = 0;
 	temp = (char)ch;
 	stemp = (char *)str;
@@ -69,6 +71,8 @@ char	*ft_strdup(const char *src)
 	size_t	len;
 	size_t	i;
 
+	if (!src)
+		return (NULL);
 	len = ft_strlen(src);
 	array = (char *)malloc(sizeof(char) * (len + 1));
 	if (!array)
