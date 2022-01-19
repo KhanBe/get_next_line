@@ -6,7 +6,7 @@
 /*   By: jaewoo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 13:37:36 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/01/04 17:49:09 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/01/19 17:48:27 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 #  define MAX_FD 256
 # endif
 
+char	*get_next_line(int fd);
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strjoin(const char *s1, const char *s2);
