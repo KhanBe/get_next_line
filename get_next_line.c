@@ -6,7 +6,7 @@
 /*   By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 17:23:12 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/01/19 17:47:41 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/01/19 23:32:18 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ char	*mod_next_line(char *res_line)
 	index = 0;
 	while (res_line[index] != '\n' && res_line[index] != '\0')
 		index++;
-	if (res_line[index] == '\0' || res_line[1] == '\0')
-		return (0);
 	temp = ft_substr(res_line, index + 1, ft_strlen(res_line) - index);
 	if (temp[0] == '\0')
 	{
